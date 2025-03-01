@@ -9,13 +9,12 @@ font-family: 'Poppins', sans-serif;
 2.  Header
 3.  Welcome-hero
 4.  About me 
-5.  Education
-6.  Skill
-7.  Experience
-8.  Profiles
-9.  Portfolio
-10. Clients
-11. Contact
+5.  Skill
+6.  Experience
+7.  Profiles
+8.  Portfolio
+9. Education
+10. Contact
 
 /*-------------------------------------
 		1.General css (Reset code)
@@ -340,18 +339,30 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*-------------------------------------
         4.  About
 --------------------------------------*/
-.about {padding: 50px 0 100px;}
+.about {padding: 50px 0;}
 .about-content {padding-top: 100px;}
+
+.section-heading {
+    text-align: center;
+    text-decoration: underline;
+}
+
 /*.single-about-txt*/
 .single-about-txt h3 {
     font-size:18px;
     color: #3c4258;
     text-transform: initial;
+    font-family: sans-serif;
+    font-weight: bold;
     line-height: 1.8;
 }
 .single-about-txt p {
     font-size: 16px;
-    color: #999fb3;
+    font-weight: 450;
+    color: 	#101337;
+    text-align: justify;
+    
+    font-style: italic;
     padding: 35px 0 43px;
     border-bottom: 1px solid #999fb3;
 }
@@ -360,14 +371,24 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 }
 .single-about-add-info h3 {
     color: #636a82;
-    font-size: 16px;
+    font-size: 19px;
     text-transform: capitalize;
 }
-.single-about-add-info p {font-weight:  300;border:  0;padding: 0;margin-top: 3px;}
+.single-about-add-info p {
+    font-weight:  550;
+    border:  0;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.single-about-add-info:hover p {
+    color: #800080;
+    cursor: pointer;
+}
 /*.single-about-txt*/
 
 /*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
+.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.3);}
 .single-about-img:before {
     position:  absolute;
     content: " ";
@@ -392,81 +413,62 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     height: 90px;
     background: #1f2c6c;
 }
-/*.ab-list-icon */
+.about-list-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 109%;
+    height: 90px;
+    background: #1f2c6c;
+}
+
+/* Icon List */
 .about-list-icon ul {
     display: flex;
 }
-.about-list-icon  ul li a {
-    padding-right: 22px;
-    cursor:pointer;
-    color: #fff;
-}
+
 .about-list-icon ul li a {
     cursor: pointer;
     color: #fff;
     display: inline-block;
-    border: 2px solid;
+    border: 2px solid #fff;
     margin-left: 20px;
     border-radius: 8px;
-    width: 30px;
-    height: 30px;
-    line-height: 28px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
     text-align: center;
+    font-size: 18px;
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(45deg, #1f2c6c, #4b0082);
 }
+
+/* Hover Effect */
+.about-list-icon ul li a:hover {
+    background: linear-gradient(45deg, #ff0066, #ff3399, #ff66cc);
+    border-color: transparent;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 102, 0.6);
+}
+
+/* Icon Alignment */
 .about-list-icon ul li a i {
-    margin-left: 6px;
+    margin-left: 0;
 }
+
 /*.ab-list-icon */
 
 /*.single-about-img */
 
 /*-------------------------------------
-        5.  Education
---------------------------------------*/
-
-.education {
-    background:  #f9fbfd;
-    padding-top:  50px;
-}
-.education-horizontal-timeline {
-    padding: 80px 0;
-}
-
-/*.education-horizontal-timeline*/
-.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
-
-.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
-.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
-.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
-
-/*.timeline-horizontal-border*/
-.timeline-horizontal-border {
-    display:  flex;
-    align-items: center;
-    padding: 26px 0 30px;
-}
-.timeline-horizontal-border i {
-    font-size:  10px;
-    color: #d92cf9;
-    margin-right:  5px;
-}
-span.single-timeline-horizontal {
-    display:  inline-block;
-    background: #b2c1ce;
-    height:  1px;
-    width: 380px;
-}
-span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
-/*.timeline-horizontal-border*/
-
-/*.education-horizontal-timeline*/
-
-/*-------------------------------------
         6.  Skills
 --------------------------------------*/
 .skills {
-    
+    background:  #f9fbfd;
+    padding-top:  50px;    
 }
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
@@ -687,6 +689,50 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
 .single-profile:hover .profile-border {border:transparent;}
+
+
+/*-------------------------------------
+        9.  Education
+--------------------------------------*/
+
+.education {
+    padding: 50px 0 100px;
+    border-top: 1px solid #e5ebf2;
+}
+.education-horizontal-timeline {
+    padding: 80px 0;
+}
+
+/*.education-horizontal-timeline*/
+.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
+.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+    display:  flex;
+    align-items: center;
+    padding: 26px 0 30px;
+}
+.timeline-horizontal-border i {
+    font-size:  10px;
+    color: #d92cf9;
+    margin-right:  5px;
+}
+span.single-timeline-horizontal {
+    display:  inline-block;
+    background: #b2c1ce;
+    height:  1px;
+    width: 380px;
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+/*.timeline-horizontal-border*/
+
+/*.education-horizontal-timeline*/
+
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
