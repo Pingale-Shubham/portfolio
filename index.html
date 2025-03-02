@@ -89,6 +89,19 @@
 			    <!-- End Navigation -->
 			</div><!--/.header-area-->
 		    <div class="clearfix"></div>
+
+			<!-- Add jQuery for Dropdown Close -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".navbar-nav li a").click(function () {
+            if ($(".navbar-toggle").is(":visible")) {
+                $(".navbar-collapse").collapse('hide');
+            }
+        });
+    });
+</script>
+
 		</header><!-- /.top-area-->
 		<!-- top-area End -->
 	
@@ -384,6 +397,95 @@
 
 		</section><!--/.experience-->
 		<!--experience end -->
+
+		<!-- Project Starts -->
+
+		<section id="projects" class="portfolio">
+			<div class="section-heading text-center">
+				<h2>Projects</h2>
+			</div>
+			<div class="container">
+				<div class="swiper project-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="project1.jpg" alt="GoRacings">
+							<div class="isotope-overlay"><a href="#">GoRacings</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project2.jpg" alt="Task Management System">
+							<div class="isotope-overlay"><a href="#">Task Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project3.jpg" alt="Employee Management System">
+							<div class="isotope-overlay"><a href="#">Employee Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project1.jpg" alt="GoRacings">
+							<div class="isotope-overlay"><a href="#">GoRacings</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project2.jpg" alt="Task Management System">
+							<div class="isotope-overlay"><a href="#">Task Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project3.jpg" alt="Employee Management System">
+							<div class="isotope-overlay"><a href="#">Employee Management System</a></div>
+						</div>
+						<img src="project1.jpg" alt="GoRacings">
+							<div class="isotope-overlay"><a href="#">GoRacings</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project2.jpg" alt="Task Management System">
+							<div class="isotope-overlay"><a href="#">Task Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project3.jpg" alt="Employee Management System">
+							<div class="isotope-overlay"><a href="#">Employee Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project1.jpg" alt="GoRacings">
+							<div class="isotope-overlay"><a href="#">GoRacings</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project2.jpg" alt="Task Management System">
+							<div class="isotope-overlay"><a href="#">Task Management System</a></div>
+						</div>
+						<div class="swiper-slide">
+							<img src="project3.jpg" alt="Employee Management System">
+							<div class="isotope-overlay"><a href="#">Employee Management System</a></div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".project-slider", {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				loop: true,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				breakpoints: {
+					768: { slidesPerView: 2 },
+					1024: { slidesPerView: 3 },
+				}
+			});
+		</script>
+		<!-- Project Ends -->	
 
 		<!--education start -->
 		<section id="education" class="education">
